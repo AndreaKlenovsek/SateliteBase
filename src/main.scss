@@ -1,0 +1,17 @@
+$primary: rgba(85, 184, 135, 1);
+$dark: rgb(14, 13, 13);
+$enable-rounded:                              false !default;
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap');
+$ralway: 'Raleway', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+
+body {
+font-family: $ralway !important;
+overflow-x: hidden !important;
+}
+
+
+// $danger: purple;
+@import "~bootstrap/scss/bootstrap";
+@import "scss/all";

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/b80a26ff52.js" crossorigin="anonymous"></script>
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+    <title>Webpack Demo</title>
+  </head>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <a class="navbar-brand" href="#">
+              SateliteBase
+            </a>
+            <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="bg-light"><img src="./assets/logo sat3.png" height="30" width="30"alt=""></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="about.html">Features</a>
+                <a class="nav-item nav-link" href="#">Pricing</a>
+                <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <div class="container">
+    <section class="hero">
+      <div class="hero__effect">
+      <img  src="./assets/SATELITE.png" alt="">
+      <div class="time" id="getTime"></div>
+    </div>
+      <div class="container hero__info">
+      <div class="row">
+        <div class="col-md-6">
+            <p class="hero__text text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quisquam cum iste voluptatum provident temporibus dignissimos aliquam, veritatis ex est reiciendis nam voluptate error architecto id a. Nulla, enim. Voluptas.</p>
+   
+            
+        </div>
+        <div class="col-md-6 d-none d-md-block">
+            <img class="hero__sat-img" src="./assets/satelitetech2.png" alt="">
+            
+        </div>
+    
+      </div>
+      <div><strong>Would you like to track satelite locations? </strong><br> Choose one of the most tracked satelites and view the displayed data below.</div>
+      <div class="row mt-2 bg-primary p-4">
+        <div class="col">
+            <div class="input-group"> 
+                <select  id="selectPlanet" class="custom-select">
+                  <option selected>Choose Astral Object...</option>
+                  <option value="25544">Space Station</option>
+                  <option value="33591">NOAA 10</option>
+                  <option value="29155">GOES 13</option>
+                  <option value="25338">NOAA 15</option>
+                  <option value="28654">NOAA 18</option>
+                  <option value="25994">TERRA</option>
+                  <option value="27424">AQUA</option>
+                  <option value="38771">METOP-B</option>
+                  <option value="37849">SUOMI NPP</option>
+                </select>
+                <div class="input-group-append">
+                    <button class="btn btn-dark" id="search_btn" type="submit">Search</button>
+                  </div>
+              </div>
+        </div>
+      </div>
+
+    </div>
+      </div>
+      <section id="results" class="bg-light card">
+     
+
+        <!-- <div class="col-md-6"id="last__results">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, id. Quae harum, ipsum ratione vero dolor, nemo id delectus expedita illum at natus voluptate hic veritatis corrupti autem. Cumque, dolor?
+        </div> -->
+      
+    </section>
+      <section class="news">
+        <div class="row">
+          <div class="col-md-6">
+            <div id="newsRes"></div>
+            <div class="search-pages"></div> 
+          </div>
+          <div class="col-md-6" id="singleNews"></div>
+        </div>
+      </section>
+     
+    </section>
+    <div class="bg-light py-5 text-dark text-center">
+    <p class="mb-2 p-2">First the quick facts: Our Solar System has eight “official” planets which orbit the Sun. Here are the planets listed in order of their distance from the Sun: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune.</p>
+    <p><strong>Choose one of the planets to find out more!</strong></p>
+    <span class="dots my-2"></span>
+  </div>
+    <section id="planets" class="planets py-5">
+        <div class="sun">
+            <a href="#"><img src="assets/Sun.png" alt=""></a>
+        </div>
+
+    <div class="planets__objects p-4 "> 
+  <div class="object object-01 mercury" id="01"><a href="#"><img src="assets/Mercury2.png" alt=""></a></div>
+  <div class="object object-02 venus" id="02"><a href="#"><img src="assets/Venus2.png" alt=""></a></div>
+  <div class="object object-03 earth" id="03"><a href="#"><img src="assets/Earth2.png" alt=""></a></div>
+  <div class="object object-04 mars" id="04"><a href="#"><img src="assets/Mars2.png" alt=""></a></div>
+  <div class="object object-05 jupiter" id="05"><a href="#"><img src="assets/Jupiter2.png" alt=""></a></div>
+  <div class="object object-06 saturn" id="06"><a href="#"><img src="assets/Saturn2.png" alt=""></a></div>
+  <div class="object object-07 uranus" id="07"><a href="#"><img src="assets/Uranus2.png" alt=""></a></div>
+  <div class="object object-08 neptune" id="08"><a href="#"><img src="assets/Neptune2.png" alt=""></a></div>
+  
+</div> 
+
+<div class="moon">
+   
+</div>    
+</section>
+<div class="planet-results card">
+
+</div>
+
+  </div>
+  <footer class="bg-light d-flex justify-content-center">
+<img class="footer__img" src="./assets/signs.png" alt="">
+<p class="text-center mt-4 align-self-end">&copy; SateliteBase by Andrea Klenovšek <span id="getYear"></span></p>
+  </footer>
+ 
+
+  </body>
+</html>

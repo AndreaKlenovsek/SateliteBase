@@ -1,0 +1,52 @@
+.news {
+padding: 2em;
+
+h3 {
+font-size: 1rem;
+}
+
+
+
+.search-pages {
+padding-top: 2rem;
+}
+
+.btn--prev, .btn--next {
+&:hover{
+border-bottom: 1px solid $primary;
+background: rgba($primary, .2);
+
+}
+}
+}
+
+
+#newsRes a{
+text-decoration: none !important;
+position: relative;
+overflow: hidden;
+
+
+
+
+h3 {
+margin: 1rem 0;
+position: relative;
+
+
+&::before {
+    content: '';
+    border: 5px solid $primary;
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    left: -100px;
+    transition: left 250ms ease-in-out;
+    
+    }
+}
+
+&:hover h3::before{
+left: -18px;
+}
+}

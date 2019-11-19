@@ -1,0 +1,84 @@
+.planets {
+background-image: url("./assets/planet-bg.png");
+background-position: center;
+background-attachment: fixed;
+position: relative;
+
+&__objects{
+display: grid;
+grid-template-columns: repeat(10, 1fr);
+}
+
+&__objects img {
+position: absolute;
+left: 120px;
+top: 30%;
+height: 100px;
+width: 100px;
+}
+
+.venus img {
+left: 200px;
+width: 140px;
+}
+
+.earth img {
+left: 320px;
+}
+
+.mars img {
+left: 430px;
+}
+
+.jupiter img {
+left: 520px;
+width: 140px;
+}
+
+.saturn img {
+left: 640px;
+width: 130px;
+}
+
+.uranus img {
+left: 770px;
+}
+
+.neptune img {
+left: 880px;
+}
+
+.sun img {
+-webkit-filter: drop-shadow(5px 5px 10px rgba(252, 169, 159, 0.3),
+
+);
+
+}
+
+
+.object img:hover {
+-webkit-filter: drop-shadow(0 1px 7px rgba(186, 247, 206, 0.3));
+}
+
+
+& div a {
+cursor: pointer;
+}
+}
+
+.planet-results {
+position: relative;
+
+.btn-close-rounded {
+position: absolute;
+top: 0;
+right: 0;
+}
+}
+
+
+@media(max-width: 500px) {
+.planets {
+display: block;
+}
+}
