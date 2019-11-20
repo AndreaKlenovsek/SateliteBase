@@ -22,7 +22,7 @@ elements.newsContainer.innerHTML = "";
 
 const createBtn = (page, type) => `
 <button class="btn btn-page btn--${type}" data-goto=${type === "prev" ? page - 1 : page + 1 }>
-<span>Page ${type === "prev" ? page - 1 : page + 1 }</span>
+<span>${type === "prev" ? "< Page" : " Page>"} ${type === "prev" ? page - 1 : page + 1 }</span>
 </button>
 `;
 

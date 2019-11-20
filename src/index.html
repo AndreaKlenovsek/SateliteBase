@@ -8,9 +8,9 @@
     <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
     <title>Webpack Demo</title>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#main-nav" data-offset="0">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary" id="main-nav">
             <a class="navbar-brand" href="#">
               SateliteBase
             </a>
@@ -19,16 +19,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="about.html">Features</a>
-                <a class="nav-item nav-link" href="#">Pricing</a>
-                <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                <a class="nav-item nav-link active" href="#home">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#satelites">Satelites</a>
+                <a class="nav-item nav-link" href="#news">News</a>
+                <a class="nav-item nav-link" href="#planets">Planets</a>
               </div>
             </div>
           </nav>
     </header>
     <div class="container">
-    <section class="hero">
+    <section class="hero" id="home">
       <div class="hero__effect">
       <img  src="./assets/SATELITE.png" alt="">
       <div class="time" id="getTime"></div>
@@ -46,7 +46,7 @@
         </div>
     
       </div>
-      <div><strong>Would you like to track satelite locations? </strong><br> Choose one of the most tracked satelites and view the displayed data below.</div>
+      <div id="satelites"><strong>Would you like to track satelite locations? </strong><br> Choose one of the most tracked satelites and view the displayed data below.</div>
       <div class="row mt-2 bg-primary p-4">
         <div class="col">
             <div class="input-group"> 
@@ -79,7 +79,8 @@
         </div> -->
       
     </section>
-      <section class="news">
+      <section class="news" id="news">
+        <h2 class="news__title">Space Telescope News Releases</h2>
         <div class="row">
           <div class="col-md-6">
             <div id="newsRes"></div>
@@ -95,7 +96,7 @@
     <p><strong>Choose one of the planets to find out more!</strong></p>
     <span class="dots my-2"></span>
   </div>
-    <section id="planets" class="planets py-5">
+    <section id="planets" class="planets py-5" id="planets">
         <div class="sun">
             <a href="#"><img src="assets/Sun.png" alt=""></a>
         </div>
