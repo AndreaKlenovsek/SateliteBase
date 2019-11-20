@@ -1,3 +1,6 @@
+import 'bootstrap';
+
+
 import { run } from "./app/app";
 import "./main.scss";
 import { AlertService } from "./app/alert.service";
@@ -15,6 +18,7 @@ import * as newsView from "./js/views/newsView";
 import * as singleNewsView from "./js/views/singleNewsView";
 import {elements} from "./js/base";
 import {renderLoader, removeLoader} from "./js/views/loader";
+
 
 const state = {};
 
@@ -128,8 +132,33 @@ console.log(error);
 }
 }
 
+const initScrollSpy = () => {
+    // Init Scrollspy
+    // $('body').scrollspy({ target: '#main-nav' });
+
+    // Smooth Scrolling
+    $("#main-nav a").on('click', function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+
+          window.location.hash = hash;
+        });
+      }
+    });
+}
+
+window.onload = function() {
+    initScrollSpy();
+  }
 
 document.addEventListener("DOMContentLoaded", () => {
+
 getTime();
 newsControl();
 
@@ -166,7 +195,7 @@ singleNewsView.renderSingleNews(state.singleNews.newsRes);
 }
 
 
-window.addEventListener("click", (e) => {
+elements.newsContainer.addEventListener("click", (e) => {
 e.preventDefault();
 const el = e.target.parentNode;
 controlLikes(el);

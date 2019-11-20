@@ -9,9 +9,38 @@ $montserrat: 'Montserrat', sans-serif;
 body {
 font-family: $ralway !important;
 overflow-x: hidden !important;
+background-image: url("./assets/bg sat.png");
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
 }
 
 
-// $danger: purple;
+
+h1, h2, h3, h4, p {
+margin: 0;
+}
+    
+img{
+max-width: 100%;
+height: auto;
+}
+
+footer {
+margin-top: 44rem;
+position: relative;
+height: 300px;
+    
+img{
+position: absolute;
+left: 50%;
+top: -80px;
+width: 80px;
+transform: translateX(-50%);
+}
+}
+
+
+
 @import "~bootstrap/scss/bootstrap";
 @import "scss/all";
