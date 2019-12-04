@@ -3,56 +3,28 @@ background-image: url("./assets/planet-bg.png");
 background-position: center;
 background-attachment: fixed;
 position: relative;
+display: flex;
+justify-content: space-around;
+
 
 &__objects{
-display: grid;
-grid-template-columns: repeat(10, 1fr);
+display: flex;
+justify-content: space-between;
+width: 100%;
 }
 
 &__objects img {
-position: absolute;
-left: 120px;
-top: 30%;
 height: 100px;
-width: 100px;
+width:100px;
 }
 
-.venus img {
-left: 200px;
-width: 140px;
-}
 
-.earth img {
-left: 320px;
-}
-
-.mars img {
-left: 430px;
-}
-
-.jupiter img {
-left: 520px;
-width: 140px;
-}
-
-.saturn img {
-left: 640px;
-width: 130px;
-}
-
-.uranus img {
-left: 770px;
-}
-
-.neptune img {
-left: 880px;
+.venus img, .jupiter img {
+width:140px;
 }
 
 .sun img {
--webkit-filter: drop-shadow(5px 5px 10px rgba(252, 169, 159, 0.3),
-
-);
-
+-webkit-filter: drop-shadow(5px 5px 10px rgba(252, 169, 159, 0.3),);
 }
 
 
@@ -77,8 +49,21 @@ right: 0;
 }
 
 
-@media(max-width: 500px) {
-.planets {
-display: block;
-}
-}
+@media(max-width: 800px) {
+    .planets .sun img {
+        height: 80px;
+        width:100px;
+    }
+    .planets__objects img {
+        height: 40px;
+        width:40px;
+    }
+
+    .planets .venus img,  .planets .jupiter img {
+        width:50px;
+        }
+
+    .planet-results img {
+    margin-left: 4em;
+    }
+    }

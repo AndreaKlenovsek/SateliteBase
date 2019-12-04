@@ -11,5 +11,6 @@ cardBody: document.querySelector(".card-body"),
 planetResults: document.querySelector(".planet-results"),
 newsContainer: document.getElementById("newsRes"),
 searchResPages: document.querySelector(".search-pages"),
-singleNews: document.getElementById("singleNews",)
+singleNews: document.getElementById("singleNews"),
+likedDiv: document.getElementById("liked-news"),
 }

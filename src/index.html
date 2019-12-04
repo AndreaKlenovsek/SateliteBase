@@ -7,7 +7,8 @@
     <script src="https://kit.fontawesome.com/b80a26ff52.js" crossorigin="anonymous"></script>
     <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
     <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
-    <title>Webpack Demo</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://shrani.si/f/34/nw/2i7CIjPa/logo-sat3.png" />
+    <title>SateliteBase</title>
   </head>
   <body data-spy="scroll" data-target="#main-nav" data-offset="0">
     <header>
@@ -15,8 +16,8 @@
             <a class="navbar-brand" href="#">
               SateliteBase
             </a>
-            <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="bg-light"><img src="./assets/logo sat3.png" height="30" width="30"alt=""></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span><img src="./assets/logo sat3.png" height="30" width="30"alt=""></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
@@ -37,7 +38,7 @@
       <div class="container hero__info">
       <div class="row">
         <div class="col-md-6">
-            <p class="hero__text text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quisquam cum iste voluptatum provident temporibus dignissimos aliquam, veritatis ex est reiciendis nam voluptate error architecto id a. Nulla, enim. Voluptas.</p>
+            <p class="hero__text text-left">SateliteBase is test app where you can freely browse through the latest space telescope articles, search for satelite positions and learn more about eight planets in your Solar System. </p>
    
             
         </div>
@@ -47,6 +48,7 @@
         </div>
     
       </div>
+
       <div id="satelites"><strong>Would you like to track satelite locations? </strong><br> Choose one of the most tracked satelites and view the displayed data below.</div>
       <div class="row mt-2 bg-primary p-4">
         <div class="col">
@@ -89,6 +91,11 @@
           </div>
           <div class="col-md-6" id="singleNews"></div>
         </div>
+        <div id="likes" class="likes">
+          <h3 class="py-4"><i class="fas fa-heart px-2"></i>Liked news</h3>
+          <ul id="liked-news"></ul>
+
+        </div>
       </section>
      
     </section>
@@ -113,10 +120,7 @@
   <div class="object object-08 neptune" id="08"><a href="#"><img src="assets/Neptune2.png" alt=""></a></div>
   
 </div> 
-
-<div class="moon">
-   
-</div>    
+ 
 </section>
 <div class="planet-results card">
 
@@ -125,7 +129,8 @@
   </div>
   <footer class="bg-light d-flex justify-content-center">
 <img class="footer__img" src="./assets/signs.png" alt="">
-<p class="text-center mt-4 align-self-end">&copy; SateliteBase by Andrea Klenovšek <span id="getYear"></span></p>
+<a href="https://www.space.com/16080-solar-system-planets.html"></a><p class="text-muted">info source: https://www.space.com/16080-solar-system-planets.html</p></a>
+<p class="text-center mt-1">&copy; SateliteBase by Andrea Klenovšek <span id="getYear"></span></p>
   </footer>
  
 

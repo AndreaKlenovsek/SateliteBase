@@ -36,7 +36,11 @@ module.exports = merge(common, {
           collapseWhitespace: true,
           removeComments: true
         }
-      })
+      }),
+      new webpack.ProvidePlugin({
+        jQuery: 'jquery',
+        $: 'jquery'
+    })
 
     ]
   },

@@ -22,7 +22,7 @@ elements.newsContainer.innerHTML = "";
 
 const createBtn = (page, type) => `
 <button class="btn btn-page btn--${type}" data-goto=${type === "prev" ? page - 1 : page + 1 }>
-<span>${type === "prev" ? "< Page" : " Page>"} ${type === "prev" ? page - 1 : page + 1 }</span>
+<span>Page ${type === "prev" ? page - 1 : page + 1 }</span>
 </button>
 `;
 
@@ -55,8 +55,10 @@ elements.searchResPages.insertAdjacentHTML("afterbegin", pageBtn);
 export const renderNews = (news, page=1, resPerPage=5) => {
 const start = (page - 1) * resPerPage;
 const end = page * resPerPage;
+if(news) {
 
-news.slice(start, end).forEach(displayNews);
-
+const latestNews =  news.slice(start, end).map(displayNews).join("");
+console.log(latestNews)
 renderPages(page, news.length, resPerPage);
+}
 }

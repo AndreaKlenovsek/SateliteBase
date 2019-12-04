@@ -10,7 +10,7 @@ this.proxy = "https://cors-anywhere.herokuapp.com/"
 
 async satelite() {
 try{
-    const id = "25544"
+   
     const res = await axios(`${this.proxy}https://www.n2yo.com/rest/v1/satellite/positions/${this.id}/41.702/-76.014/0/1/&apiKey=${this.apiKey}`);
    this.info = res.data.info;
    this.lat = res.data.positions[0].satlatitude;

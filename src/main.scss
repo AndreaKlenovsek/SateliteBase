@@ -26,16 +26,28 @@ max-width: 100%;
 height: auto;
 }
 
+.navbar-light .navbar-toggler {
+background: white !important;
+}
+
+.navbar-light .navbar-toggler:hover {
+background: rgb(241, 241, 241) !important;
+}
+
 footer {
-margin-top: 44rem;
 position: relative;
-height: 300px;
+padding: 4rem;
+margin-top: 4rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
     
 img{
 position: absolute;
 left: 50%;
 top: -80px;
-width: 80px;
+width: 50px;
 transform: translateX(-50%);
 }
 }

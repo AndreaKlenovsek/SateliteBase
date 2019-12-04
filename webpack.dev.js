@@ -21,6 +21,10 @@ module.exports = merge(common, {
       filename: "about.html",
       chunks: ["about"],
     }),
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery',
+      $: 'jquery'
+  })
     
  
   ],

@@ -1,7 +1,5 @@
 import axios from "axios";
 
-
-
 export default class SearchNews {
 constructor() {
 this.proxy = "https://cors-anywhere.herokuapp.com/";
